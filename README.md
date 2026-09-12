@@ -2,7 +2,7 @@
 
 API REST desarrollada en **.NET 10** con arquitectura en capas para la gestión académica de alumnos, cursos y matrículas.
 
-## 🏗️ Arquitectura
+## Arquitectura
 
 ```
 Academia.API          → Minimal APIs, Endpoints, Middleware
@@ -12,7 +12,7 @@ Academia.DataAccess   → EF Core, Entidades, Configuraciones
 Academia.Common       → Helpers compartidos (Result Pattern)
 ```
 
-## 🚀 Tecnologías
+## Tecnologías
 
 - .NET 10 / C#
 - ASP.NET Core Minimal APIs
@@ -62,7 +62,7 @@ docker-compose up -d
 http://localhost:5046/swagger/index.html
 ```
 
-## 🔐 Autenticación
+## Autenticación
 
 La API usa JWT. Para obtener el token:
 
