@@ -1,0 +1,15 @@
+D:\Datos\Developer\GalaxyTraining\NET10_Fullstack2026\Academia\Academia\Academia.DataAccess\bin\Debug\net10.0\Academia.DataAccess.deps.json
+D:\Datos\Developer\GalaxyTraining\NET10_Fullstack2026\Academia\Academia\Academia.DataAccess\bin\Debug\net10.0\Academia.DataAccess.runtimeconfig.json
+D:\Datos\Developer\GalaxyTraining\NET10_Fullstack2026\Academia\Academia\Academia.DataAccess\bin\Debug\net10.0\Academia.DataAccess.dll
+D:\Datos\Developer\GalaxyTraining\NET10_Fullstack2026\Academia\Academia\Academia.DataAccess\bin\Debug\net10.0\Academia.DataAccess.pdb
+D:\Datos\Developer\GalaxyTraining\NET10_Fullstack2026\Academia\Academia\Academia.DataAccess\obj\Debug\net10.0\Academia.DataAccess.csproj.AssemblyReference.cache
+D:\Datos\Developer\GalaxyTraining\NET10_Fullstack2026\Academia\Academia\Academia.DataAccess\obj\Debug\net10.0\Academia.DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+D:\Datos\Developer\GalaxyTraining\NET10_Fullstack2026\Academia\Academia\Academia.DataAccess\obj\Debug\net10.0\Academia.DataAccess.AssemblyInfoInputs.cache
+D:\Datos\Developer\GalaxyTraining\NET10_Fullstack2026\Academia\Academia\Academia.DataAccess\obj\Debug\net10.0\Academia.DataAccess.AssemblyInfo.cs
+D:\Datos\Developer\GalaxyTraining\NET10_Fullstack2026\Academia\Academia\Academia.DataAccess\obj\Debug\net10.0\Academia.DataAccess.csproj.CoreCompileInputs.cache
+D:\Datos\Developer\GalaxyTraining\NET10_Fullstack2026\Academia\Academia\Academia.DataAccess\obj\Debug\net10.0\Academia.DataAccess.dll
+D:\Datos\Developer\GalaxyTraining\NET10_Fullstack2026\Academia\Academia\Academia.DataAccess\obj\Debug\net10.0\refint\Academia.DataAccess.dll
+D:\Datos\Developer\GalaxyTraining\NET10_Fullstack2026\Academia\Academia\Academia.DataAccess\obj\Debug\net10.0\Academia.DataAccess.pdb
+D:\Datos\Developer\GalaxyTraining\NET10_Fullstack2026\Academia\Academia\Academia.DataAccess\obj\Debug\net10.0\Academia.DataAccess.genruntimeconfig.cache
+D:\Datos\Developer\GalaxyTraining\NET10_Fullstack2026\Academia\Academia\Academia.DataAccess\obj\Debug\net10.0\ref\Academia.DataAccess.dll
+D:\Datos\Developer\GalaxyTraining\NET10_Fullstack2026\Academia\Academia\Academia.DataAccess\obj\Debug\net10.0\Academia.1C875661.Up2Date

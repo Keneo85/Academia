@@ -1,0 +1,135 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Datos\\Developer\\GalaxyTraining\\NET10_Fullstack2026\\Academia\\Academia\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{20A6EF51-83AB-BAB5-6426-63F8EBB96466}|Academia.api\\Academia.api.csproj|d:\\datos\\developer\\galaxytraining\\net10_fullstack2026\\academia\\academia\\academia.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{20A6EF51-83AB-BAB5-6426-63F8EBB96466}|Academia.api\\Academia.api.csproj|solutionrelative:academia.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20A6EF51-83AB-BAB5-6426-63F8EBB96466}|Academia.api\\Academia.api.csproj|d:\\datos\\developer\\galaxytraining\\net10_fullstack2026\\academia\\academia\\academia.api\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{20A6EF51-83AB-BAB5-6426-63F8EBB96466}|Academia.api\\Academia.api.csproj|solutionrelative:academia.api\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20A6EF51-83AB-BAB5-6426-63F8EBB96466}|Academia.api\\Academia.api.csproj|d:\\datos\\developer\\galaxytraining\\net10_fullstack2026\\academia\\academia\\academia.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{20A6EF51-83AB-BAB5-6426-63F8EBB96466}|Academia.api\\Academia.api.csproj|solutionrelative:academia.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{39241F42-0091-B9BA-64EB-780E1775D705}|01.deploy{39241F42-0091-B9BA-64EB-780E1775D705}|D:\\Datos\\Developer\\GalaxyTraining\\NET10_Fullstack2026\\Academia\\Academia\\docker-compose.yml||{06C066C6-04A2-4E5D-8202-439FD4234EF1}",
+      "RelativeMoniker": "D:0:0:{39241F42-0091-B9BA-64EB-780E1775D705}|01.deploy{39241F42-0091-B9BA-64EB-780E1775D705}|solutionrelative:docker-compose.yml||{06C066C6-04A2-4E5D-8202-439FD4234EF1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20A6EF51-83AB-BAB5-6426-63F8EBB96466}|Academia.api\\Academia.api.csproj|d:\\datos\\developer\\galaxytraining\\net10_fullstack2026\\academia\\academia\\academia.api\\endpoints\\authendpoints.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{20A6EF51-83AB-BAB5-6426-63F8EBB96466}|Academia.api\\Academia.api.csproj|solutionrelative:academia.api\\endpoints\\authendpoints.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 280,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Datos\\Developer\\GalaxyTraining\\NET10_Fullstack2026\\Academia\\Academia\\Academia.api\\Program.cs",
+              "RelativeDocumentMoniker": "Academia.api\\Program.cs",
+              "ToolTip": "D:\\Datos\\Developer\\GalaxyTraining\\NET10_Fullstack2026\\Academia\\Academia\\Academia.api\\Program.cs",
+              "RelativeToolTip": "Academia.api\\Program.cs",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAmwEYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-11T23:27:51.672Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "D:\\Datos\\Developer\\GalaxyTraining\\NET10_Fullstack2026\\Academia\\Academia\\Academia.api\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "Academia.api\\Properties\\launchSettings.json",
+              "ToolTip": "D:\\Datos\\Developer\\GalaxyTraining\\NET10_Fullstack2026\\Academia\\Academia\\Academia.api\\Properties\\launchSettings.json",
+              "RelativeToolTip": "Academia.api\\Properties\\launchSettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-09-11T23:27:21.8Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\Datos\\Developer\\GalaxyTraining\\NET10_Fullstack2026\\Academia\\Academia\\Academia.api\\appsettings.json",
+              "RelativeDocumentMoniker": "Academia.api\\appsettings.json",
+              "ToolTip": "D:\\Datos\\Developer\\GalaxyTraining\\NET10_Fullstack2026\\Academia\\Academia\\Academia.api\\appsettings.json",
+              "RelativeToolTip": "Academia.api\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-09-11T23:22:31.627Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "docker-compose.yml",
+              "DocumentMoniker": "D:\\Datos\\Developer\\GalaxyTraining\\NET10_Fullstack2026\\Academia\\Academia\\docker-compose.yml",
+              "RelativeDocumentMoniker": "docker-compose.yml",
+              "ToolTip": "D:\\Datos\\Developer\\GalaxyTraining\\NET10_Fullstack2026\\Academia\\Academia\\docker-compose.yml",
+              "RelativeToolTip": "docker-compose.yml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003775|",
+              "WhenOpened": "2026-09-11T23:22:25.919Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AuthEndpoints.cs",
+              "DocumentMoniker": "D:\\Datos\\Developer\\GalaxyTraining\\NET10_Fullstack2026\\Academia\\Academia\\Academia.api\\Endpoints\\AuthEndpoints.cs",
+              "RelativeDocumentMoniker": "Academia.api\\Endpoints\\AuthEndpoints.cs",
+              "ToolTip": "D:\\Datos\\Developer\\GalaxyTraining\\NET10_Fullstack2026\\Academia\\Academia\\Academia.api\\Endpoints\\AuthEndpoints.cs",
+              "RelativeToolTip": "Academia.api\\Endpoints\\AuthEndpoints.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAQwAoAAABdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-11T23:12:34.052Z"
+            }
+          ]
+        },
+        {
+          "DockedHeight": 120,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

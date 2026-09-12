@@ -1,0 +1,12 @@
+D:\Datos\Developer\GalaxyTraining\NET10_Fullstack2026\Academia\Academia\Academia.Common\bin\Debug\net10.0\Academia.Common.deps.json
+D:\Datos\Developer\GalaxyTraining\NET10_Fullstack2026\Academia\Academia\Academia.Common\bin\Debug\net10.0\Academia.Common.dll
+D:\Datos\Developer\GalaxyTraining\NET10_Fullstack2026\Academia\Academia\Academia.Common\bin\Debug\net10.0\Academia.Common.pdb
+D:\Datos\Developer\GalaxyTraining\NET10_Fullstack2026\Academia\Academia\Academia.Common\obj\Debug\net10.0\Academia.Common.GeneratedMSBuildEditorConfig.editorconfig
+D:\Datos\Developer\GalaxyTraining\NET10_Fullstack2026\Academia\Academia\Academia.Common\obj\Debug\net10.0\Academia.Common.AssemblyInfoInputs.cache
+D:\Datos\Developer\GalaxyTraining\NET10_Fullstack2026\Academia\Academia\Academia.Common\obj\Debug\net10.0\Academia.Common.AssemblyInfo.cs
+D:\Datos\Developer\GalaxyTraining\NET10_Fullstack2026\Academia\Academia\Academia.Common\obj\Debug\net10.0\Academia.Common.csproj.CoreCompileInputs.cache
+D:\Datos\Developer\GalaxyTraining\NET10_Fullstack2026\Academia\Academia\Academia.Common\obj\Debug\net10.0\Academia.Common.dll
+D:\Datos\Developer\GalaxyTraining\NET10_Fullstack2026\Academia\Academia\Academia.Common\obj\Debug\net10.0\refint\Academia.Common.dll
+D:\Datos\Developer\GalaxyTraining\NET10_Fullstack2026\Academia\Academia\Academia.Common\obj\Debug\net10.0\Academia.Common.pdb
+D:\Datos\Developer\GalaxyTraining\NET10_Fullstack2026\Academia\Academia\Academia.Common\obj\Debug\net10.0\ref\Academia.Common.dll
+D:\Datos\Developer\GalaxyTraining\NET10_Fullstack2026\Academia\Academia\Academia.Common\obj\Debug\net10.0\Academia.AA441A91.Up2Date

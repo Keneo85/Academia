@@ -1,0 +1,22 @@
+services:
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: sqlserver_academia_api
+    restart: always
+    environment:
+      MSSQL_SA_PASSWORD: "Academia@2026"
+      ACCEPT_EULA: "Y"
+      MSSQL_PID: "express"
+    ports:
+      - "1502:1433"
+    volumes:
+      - C:\Users\USUARIO\Documents\Docker\Volumenes\academia_api:/var/opt/mssql/data
+
+  academia-api:
+    build:
+      context: .
+      dockerfile: dockerfile
+    ports:
+      - "1600:8080"
+    depends_on:
+      - sqlserver
