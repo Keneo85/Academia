@@ -1,0 +1,12 @@
+table { width: 100%; }
+.filter { display: block; margin-bottom: 1rem; }
+.actions { text-align: right; }
+.pager {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: .5rem;
+  padding: .5rem;
+  color: var(--mat-sys-on-surface-variant);
+  font-size: .85rem;
+}

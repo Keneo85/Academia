@@ -1,0 +1,6 @@
+.alumno { max-width: 480px; }
+.detalle { display: flex; align-items: baseline; gap: 1rem; }
+.curso { flex: 1; }
+.qty { width: 120px; }
+.subtotal { width: 110px; text-align: right; }
+.total { text-align: right; font: var(--mat-sys-title-medium); }

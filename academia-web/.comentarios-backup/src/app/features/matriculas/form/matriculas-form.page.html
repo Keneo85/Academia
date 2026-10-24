@@ -1,0 +1,65 @@
+<app-page-header title="Nueva matrícula" subtitle="Elige el alumno y uno o más cursos" />
+
+<mat-card appearance="outlined">
+  <mat-card-content>
+    <form class="form" (submit)="onSubmit($event)" novalidate>
+      <!-- Si la API tiene GET /api/alumnos -> selector; si no -> se escribe el ID -->
+      @if (alumnosRes.error()) {
+        <mat-form-field appearance="outline" class="alumno">
+          <mat-label>ID del alumno</mat-label>
+          <input matInput type="number" [formField]="f.alumnoId" />
+          <mat-error>Ingresa un ID válido</mat-error>
+        </mat-form-field>
+      } @else {
+        <mat-form-field appearance="outline" class="alumno">
+          <mat-label>Alumno</mat-label>
+          <mat-select [formField]="f.alumnoId">
+            @for (a of alumnos(); track a.id) {
+              <mat-option [value]="a.id">{{ a.apellidos }}, {{ a.nombres }} — DNI {{ a.dni }}</mat-option>
+            }
+          </mat-select>
+          <mat-error>Selecciona un alumno</mat-error>
+        </mat-form-field>
+      }
+
+      <h3>Cursos</h3>
+      <!-- f.detalles es un array de campos: se recorre con @for -->
+      @for (d of f.detalles; track $index; let i = $index) {
+        <div class="detalle">
+          <!-- mat-select también funciona con [formField] -->
+          <mat-form-field appearance="outline" class="curso">
+            <mat-label>Curso</mat-label>
+            <mat-select [formField]="d.cursoId">
+              @for (c of cursos(); track c.id) {
+                <mat-option [value]="c.id">{{ c.nombre }} — {{ c.precio | currency: 'PEN' : 'S/ ' }}</mat-option>
+              }
+            </mat-select>
+            <mat-error>Selecciona un curso</mat-error>
+          </mat-form-field>
+          <mat-form-field appearance="outline" class="qty">
+            <mat-label>Cantidad</mat-label>
+            <input matInput type="number" [formField]="d.cantidad" />
+          </mat-form-field>
+          <span class="subtotal">
+            {{ precioDe(d.cursoId().value()) * d.cantidad().value() | currency: 'PEN' : 'S/ ' }}
+          </span>
+          <button mat-icon-button type="button" matTooltip="Quitar" (click)="quitar(i)"
+                  [disabled]="model().detalles.length === 1">
+            <mat-icon>close</mat-icon>
+          </button>
+        </div>
+      }
+      <div>
+        <button mat-stroked-button type="button" (click)="agregar()">
+          <mat-icon>add</mat-icon> Agregar curso
+        </button>
+      </div>
+
+      <p class="total">Total: <strong>{{ total() | currency: 'PEN' : 'S/ ' }}</strong></p>
+
+      <div class="form-actions">
+        <button mat-flat-button type="submit" [disabled]="f().submitting()">Registrar matrícula</button>
+      </div>
+    </form>
+  </mat-card-content>
+</mat-card>

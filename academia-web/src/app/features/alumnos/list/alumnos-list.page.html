@@ -1,0 +1,83 @@
+<app-page-header title="Alumnos" subtitle="Alumnos registrados y su usuario de acceso">
+  <a mat-flat-button routerLink="nuevo"><mat-icon>person_add</mat-icon> Nuevo alumno</a>
+</app-page-header>
+
+<mat-card appearance="outlined">
+  @if (alumnos.isLoading()) {
+    <mat-progress-bar mode="indeterminate" />
+  }
+
+  <div class="toolbar">
+    <mat-form-field appearance="outline" subscriptSizing="dynamic" class="search">
+      <mat-label>Buscar por nombre, apellido o DNI</mat-label>
+      <mat-icon matPrefix>search</mat-icon>
+      <input matInput #q (keyup.enter)="buscar(q.value)" />
+      @if (search()) {
+        <button mat-icon-button matSuffix matTooltip="Limpiar" (click)="q.value = ''; buscar('')">
+          <mat-icon>close</mat-icon>
+        </button>
+      }
+    </mat-form-field>
+  </div>
+
+  @if (alumnos.error()) {
+    <app-empty-state
+      [icon]="notFound() ? 'construction' : 'cloud_off'"
+      [message]="notFound() ? 'Esta lista necesita GET /api/alumnos en la API (ver la guía del backend).' : 'No se pudo cargar el listado.'" />
+  } @else if (!alumnos.isLoading() && rows().length === 0) {
+    <app-empty-state icon="group_off" message="No hay alumnos que coincidan." />
+  } @else {
+    <table mat-table [dataSource]="rows()">
+      <ng-container matColumnDef="id">
+        <th mat-header-cell *matHeaderCellDef>#</th>
+        <td mat-cell *matCellDef="let a">{{ a.id }}</td>
+      </ng-container>
+      <ng-container matColumnDef="nombre">
+        <th mat-header-cell *matHeaderCellDef>Nombre</th>
+        <td mat-cell *matCellDef="let a"><strong>{{ a.apellidos }}, {{ a.nombres }}</strong></td>
+      </ng-container>
+      <ng-container matColumnDef="dni">
+        <th mat-header-cell *matHeaderCellDef>DNI</th>
+        <td mat-cell *matCellDef="let a">{{ a.dni }}</td>
+      </ng-container>
+      <ng-container matColumnDef="email">
+        <th mat-header-cell *matHeaderCellDef>Email</th>
+        <td mat-cell *matCellDef="let a">{{ a.email }}</td>
+      </ng-container>
+      <ng-container matColumnDef="telefono">
+        <th mat-header-cell *matHeaderCellDef>Teléfono</th>
+        <td mat-cell *matCellDef="let a">{{ a.telefono }}</td>
+      </ng-container>
+      <ng-container matColumnDef="usuario">
+        <th mat-header-cell *matHeaderCellDef>Usuario</th>
+        <td mat-cell *matCellDef="let a">{{ a.userName }}</td>
+      </ng-container>
+      <ng-container matColumnDef="creado">
+        <th mat-header-cell *matHeaderCellDef>Registrado</th>
+        <td mat-cell *matCellDef="let a">{{ a.createdAt | date: 'dd/MM/yyyy' }}</td>
+      </ng-container>
+      <ng-container matColumnDef="acciones">
+        <th mat-header-cell *matHeaderCellDef></th>
+        <td mat-cell *matCellDef="let a" class="actions">
+          <a mat-icon-button matTooltip="Ver matrículas" routerLink="/matriculas" [queryParams]="{ alumnoId: a.id }">
+            <mat-icon>assignment</mat-icon>
+          </a>
+        </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="columns"></tr>
+      <tr mat-row *matRowDef="let row; columns: columns"></tr>
+    </table>
+  }
+
+  <div class="pager">
+    <span>Página {{ page() }}</span>
+    <button mat-icon-button matTooltip="Anterior" [disabled]="page() === 1" (click)="page.set(page() - 1)">
+      <mat-icon>chevron_left</mat-icon>
+    </button>
+    <button mat-icon-button matTooltip="Siguiente" [disabled]="rows().length < pageSize"
+            (click)="page.set(page() + 1)">
+      <mat-icon>chevron_right</mat-icon>
+    </button>
+  </div>
+</mat-card>

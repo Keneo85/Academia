@@ -1,0 +1,26 @@
+<!-- mat-nav-list + mat-list-item: menú de navegación; routerLinkActive marca el activo -->
+<mat-nav-list>
+  <a mat-list-item routerLink="/cursos" routerLinkActive #rla1="routerLinkActive" [activated]="rla1.isActive">
+    <mat-icon matListItemIcon>menu_book</mat-icon>
+    <span matListItemTitle>Cursos</span>
+  </a>
+
+  <!-- *appHasRole: cada rol ve sus opciones -->
+  <ng-container *appHasRole="'Admin'">
+    <a mat-list-item routerLink="/alumnos" routerLinkActive #rla2="routerLinkActive" [activated]="rla2.isActive">
+      <mat-icon matListItemIcon>group</mat-icon>
+      <span matListItemTitle>Alumnos</span>
+    </a>
+    <a mat-list-item routerLink="/matriculas" routerLinkActive #rla3="routerLinkActive" [activated]="rla3.isActive">
+      <mat-icon matListItemIcon>assignment</mat-icon>
+      <span matListItemTitle>Matrículas</span>
+    </a>
+  </ng-container>
+
+  <ng-container *appHasRole="'Alumno'">
+    <a mat-list-item routerLink="/matriculas" routerLinkActive #rla4="routerLinkActive" [activated]="rla4.isActive">
+      <mat-icon matListItemIcon>assignment</mat-icon>
+      <span matListItemTitle>Mis matrículas</span>
+    </a>
+  </ng-container>
+</mat-nav-list>

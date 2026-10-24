@@ -1,0 +1,92 @@
+<app-page-header title="Cursos" subtitle="Catálogo de cursos disponibles">
+  <a mat-flat-button routerLink="nuevo" *appHasRole="'Admin'">
+    <mat-icon>add</mat-icon> Nuevo curso
+  </a>
+</app-page-header>
+
+<mat-card appearance="outlined">
+  @if (cursos.isLoading()) {
+    <mat-progress-bar mode="indeterminate" />
+  }
+
+  <div class="toolbar">
+    <mat-form-field appearance="outline" subscriptSizing="dynamic" class="search">
+      <mat-label>Buscar por nombre, descripción o especialidad</mat-label>
+      <mat-icon matPrefix>search</mat-icon>
+      <input matInput [value]="searchText()" (input)="searchText.set($any($event.target).value)" />
+      @if (searchText()) {
+        <button mat-icon-button matSuffix matTooltip="Limpiar" (click)="searchText.set('')">
+          <mat-icon>close</mat-icon>
+        </button>
+      }
+    </mat-form-field>
+  </div>
+
+  @if (cursos.error()) {
+    <app-empty-state icon="cloud_off" message="No se pudo cargar el listado." />
+  } @else if (!cursos.isLoading() && rows().length === 0) {
+    <app-empty-state icon="menu_book"
+      [message]="search() ? 'Ningún curso coincide con “' + search() + '”.' : 'No hay cursos en esta página.'" />
+  } @else {
+    <table mat-table [dataSource]="rows()">
+      <ng-container matColumnDef="id">
+        <th mat-header-cell *matHeaderCellDef>#</th>
+        <td mat-cell *matCellDef="let c">{{ c.id }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="nombre">
+        <th mat-header-cell *matHeaderCellDef>Nombre</th>
+        <td mat-cell *matCellDef="let c">
+          <a class="link" [routerLink]="[c.id]">{{ c.nombre }}</a>
+          <div class="desc">{{ c.descripcion }}</div>
+        </td>
+      </ng-container>
+
+      <ng-container matColumnDef="especialidad">
+        <th mat-header-cell *matHeaderCellDef>Especialidad</th>
+        <td mat-cell *matCellDef="let c">{{ c.especialidad }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="precio">
+        <th mat-header-cell *matHeaderCellDef>Precio</th>
+        <td mat-cell *matCellDef="let c">{{ c.precio | currency: 'PEN' : 'S/ ' }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="cupos">
+        <th mat-header-cell *matHeaderCellDef>Cupos</th>
+        <td mat-cell *matCellDef="let c">{{ c.cuposDisponibles }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="creado">
+        <th mat-header-cell *matHeaderCellDef>Creado</th>
+        <td mat-cell *matCellDef="let c">{{ c.createdAt | date: 'dd/MM/yyyy' }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="acciones">
+        <th mat-header-cell *matHeaderCellDef></th>
+        <td mat-cell *matCellDef="let c" class="actions">
+          <a mat-icon-button matTooltip="Editar" [routerLink]="[c.id, 'editar']">
+            <mat-icon>edit</mat-icon>
+          </a>
+          <button mat-icon-button matTooltip="Eliminar" (click)="eliminar(c)">
+            <mat-icon>delete</mat-icon>
+          </button>
+        </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="columns()"></tr>
+      <tr mat-row *matRowDef="let row; columns: columns()"></tr>
+    </table>
+  }
+
+  <div class="pager">
+    <span>Página {{ page() }}</span>
+    <button mat-icon-button matTooltip="Anterior" [disabled]="page() === 1" (click)="page.set(page() - 1)">
+      <mat-icon>chevron_left</mat-icon>
+    </button>
+    <button mat-icon-button matTooltip="Siguiente" [disabled]="rows().length < pageSize"
+            (click)="page.set(page() + 1)">
+      <mat-icon>chevron_right</mat-icon>
+    </button>
+  </div>
+</mat-card>

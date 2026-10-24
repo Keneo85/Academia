@@ -1,0 +1,85 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\WIN\\Proyectos\\Academia\\Academia-master\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{421B4D34-B96E-9FEA-59C0-166C5DD38AF1}|Academia.Business\\Academia.Business.csproj|c:\\win\\proyectos\\academia\\academia-master\\academia.business\\implementations\\cursoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{421B4D34-B96E-9FEA-59C0-166C5DD38AF1}|Academia.Business\\Academia.Business.csproj|solutionrelative:academia.business\\implementations\\cursoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{421B4D34-B96E-9FEA-59C0-166C5DD38AF1}|Academia.Business\\Academia.Business.csproj|c:\\win\\proyectos\\academia\\academia-master\\academia.business\\implementations\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{421B4D34-B96E-9FEA-59C0-166C5DD38AF1}|Academia.Business\\Academia.Business.csproj|solutionrelative:academia.business\\implementations\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{421B4D34-B96E-9FEA-59C0-166C5DD38AF1}|Academia.Business\\Academia.Business.csproj|c:\\win\\proyectos\\academia\\academia-master\\academia.business\\interfaces\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{421B4D34-B96E-9FEA-59C0-166C5DD38AF1}|Academia.Business\\Academia.Business.csproj|solutionrelative:academia.business\\interfaces\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20A6EF51-83AB-BAB5-6426-63F8EBB96466}|Academia.api\\Academia.api.csproj|c:\\win\\proyectos\\academia\\academia-master\\academia.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{20A6EF51-83AB-BAB5-6426-63F8EBB96466}|Academia.api\\Academia.api.csproj|solutionrelative:academia.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CursoService.cs",
+              "DocumentMoniker": "C:\\WIN\\Proyectos\\Academia\\Academia-master\\Academia.Business\\Implementations\\CursoService.cs",
+              "RelativeDocumentMoniker": "Academia.Business\\Implementations\\CursoService.cs",
+              "ToolTip": "C:\\WIN\\Proyectos\\Academia\\Academia-master\\Academia.Business\\Implementations\\CursoService.cs",
+              "RelativeToolTip": "Academia.Business\\Implementations\\CursoService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-23T19:50:23.595Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AuthService.cs",
+              "DocumentMoniker": "C:\\WIN\\Proyectos\\Academia\\Academia-master\\Academia.Business\\Implementations\\AuthService.cs",
+              "RelativeDocumentMoniker": "Academia.Business\\Implementations\\AuthService.cs",
+              "ToolTip": "C:\\WIN\\Proyectos\\Academia\\Academia-master\\Academia.Business\\Implementations\\AuthService.cs",
+              "RelativeToolTip": "Academia.Business\\Implementations\\AuthService.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAkwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-23T19:49:46.059Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "IAuthService.cs",
+              "DocumentMoniker": "C:\\WIN\\Proyectos\\Academia\\Academia-master\\Academia.Business\\Interfaces\\IAuthService.cs",
+              "RelativeDocumentMoniker": "Academia.Business\\Interfaces\\IAuthService.cs",
+              "ToolTip": "C:\\WIN\\Proyectos\\Academia\\Academia-master\\Academia.Business\\Interfaces\\IAuthService.cs",
+              "RelativeToolTip": "Academia.Business\\Interfaces\\IAuthService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-23T19:48:47.245Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\WIN\\Proyectos\\Academia\\Academia-master\\Academia.api\\Program.cs",
+              "RelativeDocumentMoniker": "Academia.api\\Program.cs",
+              "ToolTip": "C:\\WIN\\Proyectos\\Academia\\Academia-master\\Academia.api\\Program.cs",
+              "RelativeToolTip": "Academia.api\\Program.cs",
+              "ViewState": "AgIAAFcAAAAAAAAAAAAAAEwAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-22T23:27:46.275Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

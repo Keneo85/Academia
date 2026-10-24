@@ -1,0 +1,21 @@
+/* Material pone colores y tipografía (material-theme.scss). Aquí solo utilidades globales. */
+* { box-sizing: border-box; }
+h1, h2, h3 { margin: 0 0 .5rem; }
+
+.spacer { flex: 1; }
+
+/* Formularios: filas que se acomodan solas */
+.form { display: flex; flex-direction: column; gap: .25rem; }
+.row { display: flex; gap: 1rem; flex-wrap: wrap; }
+.row > * { flex: 1; min-width: 180px; }
+.full { width: 100%; }
+.form-actions { display: flex; justify-content: flex-end; gap: .5rem; margin-top: .5rem; }
+
+
+.muted { color: var(--mat-sys-on-surface-variant); }
+.small { font-size: .85rem; }
+.center { text-align: center; }
+
+/* Snackbars de éxito / error */
+.snack-ok { --mat-snack-bar-container-color: #1e7b45; --mat-snack-bar-supporting-text-color: #fff; }
+.snack-error { --mat-snack-bar-container-color: var(--mat-sys-error); --mat-snack-bar-supporting-text-color: var(--mat-sys-on-error); }

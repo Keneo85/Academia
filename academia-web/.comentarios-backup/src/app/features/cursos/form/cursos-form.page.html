@@ -1,0 +1,58 @@
+<app-page-header [title]="id() ? 'Editar curso #' + id() : 'Nuevo curso'" />
+
+<mat-card appearance="outlined">
+  @if (f().submitting()) {
+    <mat-progress-bar mode="indeterminate" />
+  }
+  <mat-card-content>
+    <form class="form" (submit)="onSubmit($event)" novalidate>
+      <mat-form-field appearance="outline">
+        <mat-label>Nombre</mat-label>
+        <input matInput [formField]="f.nombre" />
+        <mat-error>El nombre es obligatorio</mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Descripción</mat-label>
+        <textarea matInput rows="3" [formField]="f.descripcion"></textarea>
+      </mat-form-field>
+
+      <div class="row">
+        <!-- Si la API tiene GET /api/especialidades -> selector; si no -> se escribe el ID -->
+        @if (especialidades.error()) {
+          <mat-form-field appearance="outline">
+            <mat-label>ID Especialidad</mat-label>
+            <input matInput type="number" [formField]="f.especialidadId" />
+            <mat-error>Debe ser mayor a 0</mat-error>
+          </mat-form-field>
+        } @else {
+          <mat-form-field appearance="outline">
+            <mat-label>Especialidad</mat-label>
+            <mat-select [formField]="f.especialidadId">
+              @for (e of especialidades.hasValue() ? (especialidades.value().value ?? []) : []; track e.id) {
+                <mat-option [value]="e.id">{{ e.nombre }}</mat-option>
+              }
+            </mat-select>
+            <mat-error>Selecciona una especialidad</mat-error>
+          </mat-form-field>
+        }
+        <mat-form-field appearance="outline">
+          <mat-label>Precio</mat-label>
+          <span matTextPrefix>S/&nbsp;</span>
+          <input matInput type="number" step="0.01" [formField]="f.precio" />
+          <mat-error>No puede ser negativo</mat-error>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Cupos disponibles</mat-label>
+          <input matInput type="number" [formField]="f.cuposDisponibles" />
+          <mat-error>No puede ser negativo</mat-error>
+        </mat-form-field>
+      </div>
+
+      <div class="form-actions">
+        <a mat-button routerLink="/cursos">Cancelar</a>
+        <button mat-flat-button type="submit" [disabled]="f().submitting()">Guardar</button>
+      </div>
+    </form>
+  </mat-card-content>
+</mat-card>

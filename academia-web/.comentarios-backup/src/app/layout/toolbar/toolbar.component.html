@@ -1,0 +1,19 @@
+<mat-toolbar class="toolbar">
+  <button mat-icon-button matTooltip="Menú" (click)="toggleMenu.emit()">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <mat-icon class="logo">school</mat-icon>
+  <span class="brand">Academia</span>
+
+  <span class="spacer"></span>
+
+  <!-- mat-menu: menú desplegable del usuario -->
+  <button mat-button [matMenuTriggerFor]="userMenu">
+    <mat-icon>account_circle</mat-icon> {{ auth.role() }}
+  </button>
+  <mat-menu #userMenu="matMenu">
+    <button mat-menu-item (click)="auth.logout()">
+      <mat-icon>logout</mat-icon> Cerrar sesión
+    </button>
+  </mat-menu>
+</mat-toolbar>

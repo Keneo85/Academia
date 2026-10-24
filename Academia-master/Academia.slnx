@@ -1,0 +1,22 @@
+<Solution>
+  <Folder Name="/01.deploy/">
+    <File Path="docker-compose.yml" />
+    <File Path="dockerfile" />
+  </Folder>
+  <Folder Name="/02.src/" />
+  <Folder Name="/02.src/01.Presentation/">
+    <Project Path="Academia.api/Academia.api.csproj" />
+  </Folder>
+  <Folder Name="/02.src/02.Core/">
+    <Project Path="Academia.Business/Academia.Business.csproj" />
+  </Folder>
+  <Folder Name="/02.src/03.Repositories/">
+    <Project Path="Academia.Repositories/Academia.Repositories.csproj" />
+  </Folder>
+  <Folder Name="/02.src/04.Infraestructure/">
+    <Project Path="Academia.DataAccess/Academia.DataAccess.csproj" />
+  </Folder>
+  <Folder Name="/02.src/05.Common/">
+    <Project Path="Academia.Common/Academia.Common.csproj" />
+  </Folder>
+</Solution>

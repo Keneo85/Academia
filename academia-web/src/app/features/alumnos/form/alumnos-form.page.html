@@ -1,0 +1,67 @@
+<app-page-header
+  title="Registrar alumno"
+  subtitle="Se crea el alumno y su usuario (rol Alumno) para iniciar sesión." />
+
+<mat-card appearance="outlined">
+  <mat-card-content>
+    <form class="form" (submit)="onSubmit($event)" novalidate>
+      <h3>Datos personales</h3>
+      <div class="row">
+        <mat-form-field appearance="outline">
+          <mat-label>Nombres</mat-label>
+          <input matInput [formField]="f.nombres" />
+          <mat-error>Obligatorio</mat-error>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Apellidos</mat-label>
+          <input matInput [formField]="f.apellidos" />
+          <mat-error>Obligatorio</mat-error>
+        </mat-form-field>
+      </div>
+      <div class="row">
+        <mat-form-field appearance="outline">
+          <mat-label>Email</mat-label>
+          <mat-icon matPrefix>mail</mat-icon>
+          <input matInput type="email" [formField]="f.email" />
+          <mat-error>Email no válido</mat-error>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Teléfono</mat-label>
+          <mat-icon matPrefix>phone</mat-icon>
+          <input matInput [formField]="f.telefono" />
+          <mat-error>Obligatorio</mat-error>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>DNI</mat-label>
+          <input matInput [formField]="f.dni" />
+          <mat-hint align="end">{{ f.dni().value().length }}/8</mat-hint>
+          <mat-error>Debe tener 8 dígitos</mat-error>
+        </mat-form-field>
+      </div>
+
+      <mat-divider />
+      <h3>Acceso</h3>
+      <div class="row">
+        <mat-form-field appearance="outline">
+          <mat-label>Usuario</mat-label>
+          <mat-icon matPrefix>person</mat-icon>
+          <input matInput [formField]="f.userName" autocomplete="off" />
+          <mat-error>Obligatorio</mat-error>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Contraseña</mat-label>
+          <mat-icon matPrefix>lock</mat-icon>
+          <input matInput type="password" [formField]="f.password" autocomplete="new-password" />
+          <mat-error>Mínimo 6 caracteres</mat-error>
+        </mat-form-field>
+      </div>
+
+      <div class="form-actions">
+        <a mat-button routerLink="/alumnos">Cancelar</a>
+        <button mat-flat-button type="submit" [disabled]="f().submitting()">
+          <mat-icon>person_add</mat-icon> Registrar
+        </button>
+      </div>
+    </form>
+  </mat-card-content>
+</mat-card>

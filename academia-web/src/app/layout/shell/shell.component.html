@@ -1,0 +1,13 @@
+<app-toolbar (toggleMenu)="menuOpen.set(!menuOpen())" />
+
+<mat-sidenav-container class="container">
+  <mat-sidenav mode="side" [opened]="menuOpen()" class="sidenav">
+    <app-sidenav />
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <main class="content">
+      <router-outlet />
+    </main>
+  </mat-sidenav-content>
+</mat-sidenav-container>

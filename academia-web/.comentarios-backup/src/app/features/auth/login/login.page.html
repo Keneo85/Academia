@@ -1,0 +1,41 @@
+<div class="auth-page">
+  <mat-card class="auth-card" appearance="outlined">
+    @if (f().submitting()) {
+      <mat-progress-bar mode="indeterminate" />
+    }
+    <mat-card-content>
+      <h1>Academia</h1>
+      <p class="muted">Inicia sesión para continuar</p>
+
+      <form class="form" (submit)="onSubmit($event)" novalidate>
+        <!-- mat-form-field + matInput: la caja con label flotante.
+             [formField] (Signal Forms) funciona directo con matInput -->
+        <mat-form-field appearance="outline">
+          <mat-label>Usuario</mat-label>
+          <mat-icon matPrefix>person</mat-icon>
+          <input matInput [formField]="f.userName" autocomplete="username" />
+          <!-- mat-error solo se ve cuando el campo es inválido y fue tocado -->
+          <mat-error>El usuario es obligatorio</mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Contraseña</mat-label>
+          <mat-icon matPrefix>lock</mat-icon>
+          <input matInput [type]="showPass() ? 'text' : 'password'" [formField]="f.password"
+                 autocomplete="current-password" />
+          <button mat-icon-button matSuffix type="button" (click)="showPass.set(!showPass())">
+            <mat-icon>{{ showPass() ? 'visibility_off' : 'visibility' }}</mat-icon>
+          </button>
+          <mat-error>La contraseña es obligatoria</mat-error>
+        </mat-form-field>
+
+        @if (error()) {
+          <p class="auth-error">{{ error() }}</p>
+        }
+
+        <button mat-flat-button type="submit" [disabled]="f().submitting()">Ingresar</button>
+      </form>
+      <p class="muted center small">¿No tienes cuenta? <a routerLink="/registro">Regístrate</a></p>
+    </mat-card-content>
+  </mat-card>
+</div>

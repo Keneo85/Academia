@@ -1,0 +1,13 @@
+table { width: 100%; }
+.toolbar { padding: 1rem 1rem 0; }
+.search { width: min(420px, 100%); }
+.actions { text-align: right; }
+.pager {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: .5rem;
+  padding: .5rem;
+  color: var(--mat-sys-on-surface-variant);
+  font-size: .85rem;
+}

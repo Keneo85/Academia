@@ -1,0 +1,27 @@
+services:
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: sqlserver_academia_api
+    restart: always
+    environment:
+      MSSQL_SA_PASSWORD: "Academia@2026"
+      ACCEPT_EULA: "Y"
+      MSSQL_PID: "express"
+    ports:
+      - "1502:1433"
+    volumes:
+      - academia_data:/var/opt/mssql
+
+  academia-api:
+    build:
+      context: .
+      dockerfile: dockerfile
+    ports:
+      - "1600:8080"
+    environment:
+      ConnectionStrings__DbAcademia: "Server=sqlserver,1433;Database=AcademiaDb;User Id=sa;Password=Academia@2026;TrustServerCertificate=True"
+    depends_on:
+      - sqlserver
+
+volumes:
+  academia_data:

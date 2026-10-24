@@ -1,0 +1,39 @@
+@if (curso.isLoading()) {
+  <mat-progress-bar mode="indeterminate" />
+} @else if (curso.error()) {
+  <app-empty-state icon="search_off" message="Curso no encontrado.">
+    <a mat-button routerLink="/cursos">Volver a cursos</a>
+  </app-empty-state>
+} @else if (curso.value(); as c) {
+  <app-page-header [title]="c.nombre" [subtitle]="c.descripcion">
+    <a mat-button routerLink="/cursos"><mat-icon>arrow_back</mat-icon> Volver</a>
+    <a mat-flat-button [routerLink]="['/cursos', c.id, 'editar']" *appHasRole="'Admin'">
+      <mat-icon>edit</mat-icon> Editar
+    </a>
+  </app-page-header>
+
+  <mat-card appearance="outlined">
+    <mat-list>
+      <mat-list-item>
+        <mat-icon matListItemIcon>sell</mat-icon>
+        <span matListItemTitle>{{ c.precio | currency: 'PEN' : 'S/ ' }}</span>
+        <span matListItemLine>Precio</span>
+      </mat-list-item>
+      <mat-list-item>
+        <mat-icon matListItemIcon>event_seat</mat-icon>
+        <span matListItemTitle>{{ c.cuposDisponibles }}</span>
+        <span matListItemLine>Cupos disponibles</span>
+      </mat-list-item>
+      <mat-list-item>
+        <mat-icon matListItemIcon>category</mat-icon>
+        <span matListItemTitle>{{ especialidad() }}</span>
+        <span matListItemLine>Especialidad</span>
+      </mat-list-item>
+      <mat-list-item>
+        <mat-icon matListItemIcon>schedule</mat-icon>
+        <span matListItemTitle>{{ c.createdAt | date: 'dd/MM/yyyy HH:mm' }} · {{ c.createdBy }}</span>
+        <span matListItemLine>Creado</span>
+      </mat-list-item>
+    </mat-list>
+  </mat-card>
+}
